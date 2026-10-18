@@ -1,0 +1,43 @@
+html = """<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ملتقى دجلة والفرات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #18302d;
+      text-align: center;
+    }
+    header {
+      background: #075e54;
+      color: white;
+      padding: 28px 12px;
+    }
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ملتقى دجلة والفرات</h1>
+    <p>ملتقاكم العراقي للتواصل والدردشة</p>
+  </header>
+  <main>
+    <h2>أهلاً وسهلاً بكم</h2>
+    <p>هذه الصفحة الأولى لمشروعنا. سنضيف ميزات الموقع بالتدريج.</p>
+  </main>
+</body>
+</html>
+"""
+path = Path("/mnt/data/index.html")
+path.write_text(html, encoding="utf-8")
+print(f"تم إنشاء الملف: {path} — الحجم: {path.stat().st_size} بايت")
